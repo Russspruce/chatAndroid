@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.epicodus.chatandroid.Constants;
 import com.epicodus.chatandroid.R;
@@ -53,9 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                name = user.getDisplayName();
+
                 if (user != null) {
                     getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
+                    name = user.getDisplayName();
                 } else {
 
                 }

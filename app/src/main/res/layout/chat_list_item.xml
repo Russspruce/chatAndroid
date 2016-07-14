@@ -7,7 +7,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NAME"
-        android:id="@+id/nameTextView" />
+        android:id="@+id/nameTextView"
+        android:textStyle="bold"
+        android:textSize="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,6 +19,8 @@
         android:layout_marginLeft="10dp"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/nameTextView"
-        android:layout_toEndOf="@+id/nameTextView" />
+        android:layout_toEndOf="@+id/nameTextView"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
 
 </RelativeLayout>
