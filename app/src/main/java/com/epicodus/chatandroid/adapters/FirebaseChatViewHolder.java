@@ -25,9 +25,11 @@ public class FirebaseChatViewHolder extends RecyclerView.ViewHolder {
     public void bindChat(Chat chat) {
         TextView name = (TextView) mView.findViewById(R.id.nameTextView);
         TextView message = (TextView) mView.findViewById(R.id.messageTextView);
+        TextView date = (TextView) mView.findViewById(R.id.dateTextView);
 
         name.setText(chat.getName() + ":");
         message.setText(chat.getMessage());
+        date.setText(chat.getDate());
 
     }
 

@@ -24,6 +24,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -71,8 +75,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == mSendButton) {
             String message = mMessageInput.getText().toString();
+            Date date = new Date();
+            DateFormat dateFormat = new SimpleDateFormat("HH:mm");
             mMessageInput.setText("");
-            Chat chat = new Chat(name, message);
+            Chat chat = new Chat(name, message, dateFormat.format(date));
             mChatReference.push().setValue(chat);
         }
     }
